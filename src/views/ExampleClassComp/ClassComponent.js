@@ -18,6 +18,9 @@ class ClassComponent extends React.Component {
   //       name: event.target.value,
   //     });
   //   };
+  handleClickButton = () => {
+    alert("Click me !");
+  };
   render() {
     return (
       <>
@@ -32,6 +35,10 @@ class ClassComponent extends React.Component {
           Hello class component, my name is {this.state["name"]}
         </div>
         <div className="second"> My facebook is {this.state.facebook}</div>
+
+        <div className="third">
+          <button onClick={() => this.handleClickButton()}>Click me!</button>
+        </div>
       </>
     );
   }
